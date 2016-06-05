@@ -1,7 +1,8 @@
 var comic = {
 	first: 1,
 	last: 143,
-	current: null
+	current: null,
+	buyURL: "https://www.topatoco.com/merchant.mvc?Screen=PROD&Store_Code=TO&Product_Code=BF-COMIC-PRINTS&Category_Code=BF&Product_Attributes%5b1%5d:value="
 }
 
 comic.update = function (action) {
@@ -25,12 +26,9 @@ comic.update = function (action) {
 
 	//Fix special cases, 8, 30
 
-	if (this.current === 30) { this.current = 31; }
-
-	//Not done yet...
-
 	$('#comic').attr("src", "http://www.buttercupfestival.com/2-" + this.current + ".png");
-	$("#comic-ID").text("Series 2 Comic " + this.current + " by David Troupes");
+	$("#comic-ID").text("Series 2 Comic " + this.current);
+	$("#buy").attr("href", this.buyURL + this.current)
 
 	$('button').prop('disabled', false);
 	if (this.current === this.first) {

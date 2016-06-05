@@ -1,7 +1,7 @@
 var comic = {
 	first: 1,
 	last: 143,
-	current: 143
+	current: null
 }
 
 comic.update = function (action) {
@@ -23,8 +23,14 @@ comic.update = function (action) {
 			break;
 	} 
 
+	//Fix special cases, 8, 30
+
+	if (this.current === 30) { this.current = 31; }
+
+	//Not done yet...
+
 	$('#comic').attr("src", "http://www.buttercupfestival.com/2-" + this.current + ".png");
-	$("#comic-ID").text("Series 2 Comic " + this.current);
+	$("#comic-ID").text("Series 2 Comic " + this.current + " by David Troupes");
 
 	$('button').prop('disabled', false);
 	if (this.current === this.first) {
@@ -34,8 +40,12 @@ comic.update = function (action) {
 	}
 };
 
-$('button').click(function () {
-	comic.update($(this).attr("id"));
+$(function () {
+	comic.update("LAST");
+
+	$('button').click(function () {
+		comic.update($(this).attr("id"));
+	});
 });
 
 

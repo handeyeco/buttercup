@@ -12,6 +12,9 @@ body {
 button {
 	width: 8em;
 	padding: .5em;
+	background-color: white;
+	border: 1px solid black;
+	outline: none;
 }
 
 

@@ -2,24 +2,32 @@
 
 body {
 	text-align: center;
-	background-color: #f2f2f2;
 	font-family: sans-serif;
 }
 
+img {
+	max-width: 100%;
+}
+
 #comic-container {
-	padding: 2em;
-	background-color: white;
 	width: auto;
 	margin: auto;
 	display: inline-block
 }
 
 button {
-	width: 8em;
+	width: 18%;
 	padding: .5em;
-	background-color: white;
-	border: 1px solid black;
+	color: white;
+	font-size: .8em;
+	background-color: #006666;
+	border: 0px solid #006666;
 	outline: none;
+}
+
+button:disabled {
+	background-color: #D5D5D5;
+	border: 0px solid #006666;
 }
 
 a:link, a:visited, a:hover, a:active { 

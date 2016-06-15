@@ -28,7 +28,7 @@ comic.update = function (action) {
 	//Change comic
 	//Fix special cases 8, 12, 30 (non-comforming naming scheme)
 	if (this.current === 8 || this.current === 12 || this.current === 30){
-		$('#comic').attr("src", "./images/2-" + this.current + ".png");
+		$('#comic').attr("src", "images/2-" + this.current + ".png");
 	} else {
 		$('#comic').attr("src", "http://www.buttercupfestival.com/2-" + this.current + ".png");
 	}

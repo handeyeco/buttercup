@@ -12,7 +12,7 @@ img {
 #comic-container {
 	width: auto;
 	margin: auto;
-	display: inline-block
+	display: inline-block;
 }
 
 button {
@@ -31,7 +31,7 @@ button:disabled {
 }
 
 a:link, a:visited, a:hover, a:active { 
-	color:#006666; 
+	color: #006666; 
 	text-decoration: none;
 }
 

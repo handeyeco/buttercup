@@ -30,8 +30,8 @@ button:disabled {
 	border: 0px solid #006666;
 }
 
-a:link, a:visited, a:hover, a:active { 
-	color: #006666; 
+a:link, a:visited, a:hover, a:active {
+	color: #006666;
 	text-decoration: none;
 }
 
@@ -56,8 +56,92 @@ h2 {
   margin-top: 0px;
 }
 
+/***********/
+/***********/
+/* Spinner */
+/***********/
+/***********/
 
+.buttercup-spinner {
+  position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -50px;
+	display: none;
+  width: 100px;
+  height: 100px;
+  animation: spinner 3s infinite linear reverse;
+}
 
+.circle:before, .circle:after {
+  content: "";
+}
 
+.circle, .circle:before, .circle:after {
+  position: absolute;
+  background-color: #006666;
+  border-radius: 50%;
+}
 
+.circle:first-of-type:before {
+  width: 24px;
+  height: 24px;
+  top: 35px;
+  left: 3px;
+}
 
+.circle:first-of-type {
+  width: 22px;
+  height: 22px;
+  left: 2px;
+  top: 24px;
+}
+
+.circle:first-of-type:after {
+  width: 20px;
+  height: 20px;
+  top: -23px;
+  left: 26px;
+}
+
+.circle:nth-of-type(2):after {
+  width: 18px;
+  height: 18px;
+  top: -25px;
+  right: 18px;
+}
+
+.circle:nth-of-type(2) {
+  width: 16px;
+  height: 16px;
+  top: 30px;
+  right: 1px;
+}
+
+.circle:nth-of-type(2):before {
+  width: 14px;
+  height: 14px;
+  top: 32px;
+  right: 2px;
+}
+
+.circle:nth-of-type(3) {
+  width: 12px;
+  height: 12px;
+  bottom: 4px;
+  right: 24px;
+}
+
+.circle:nth-of-type(3):before {
+  width: 10px;
+  height: 10px;
+  right: 30px;
+  bottom: -1px;
+}
+
+@keyframes spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -15,6 +15,10 @@ img {
 	display: inline-block;
 }
 
+.comic-display {
+	position: relative;
+}
+
 button {
 	width: 18%;
 	padding: .5em;
@@ -63,7 +67,7 @@ h2 {
 /***********/
 
 .buttercup-spinner {
-  position: fixed;
+  position: absolute;
 	top: 50%;
 	left: 50%;
 	margin-top: -50px;

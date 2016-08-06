@@ -69,7 +69,11 @@ $(function () {
 	comic.update("LAST");
 
 	//Add handlers to the buttons
-	$('button').click(function () {
+	var buttons = $('button');
+
+	$(buttons).click(function () {
+		$('button').prop('disabled', true);
+
 		comic.update($(this).attr("id"));
 	});
 });

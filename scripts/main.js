@@ -9,6 +9,7 @@ var comic = {
 comic.update = function (action) {
 	var spinner = $('.buttercup-spinner');
 	var comicImg = $('#comic');
+	var placeholder = $('#placeholder');
 
 	// "Disable" comic and show spinner
 	$(comicImg).css('opacity', 0.1);
@@ -49,6 +50,7 @@ comic.update = function (action) {
 		$(comicImg).attr('src', imgPreload.src);
 		$(comicImg).css('opacity', 1);
 		$(spinner).hide();
+		$(placeholder).hide();
 	});
 
 	//Change comic label and buy link
